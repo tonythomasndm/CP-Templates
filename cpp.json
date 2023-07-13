@@ -1,0 +1,106 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Main Boilerplate": {
+		"prefix": "mainc",
+		"body": [
+			"#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n\t$1\n\treturn 0;\n}"
+		],
+		"description": "Main Boilerplate"
+		},
+	"Main with input testcases": {
+		"prefix": "mt",
+		"body": [
+			"#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n\tint t;cin>>t;\n\twhile(t--)\n\t{\n\t\t$1\n\t}\n\treturn 0;\n}"
+		],
+		"description": "Main Boilerplate with input testcases"
+		},
+	"Main with input testcases and int n": {
+		"prefix": "mn",
+		"body": [
+			"#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n\tint t;cin>>t;\n\tint n;\n\twhile(t--)\n\t{\n\t\tcin>>n;\n\t\t$1\n\t}\n\treturn 0;\n}"
+		],
+		"description": "Main Boilerplate with input testcases and int n"
+		},
+	"Main with input testcases and int n and input string": {
+		"prefix": "mnstr",
+		"body": [
+			"#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n\tint t;cin>>t;\n\tint n;string str;\n\twhile(t--)\n\t{\n\t\tcin>>n>>str;\n\t\t$1\n\t}\n\treturn 0;\n}"
+		],
+		"description": "Main Boilerplate with input testcases and int n  and input string"
+		},
+	"Main with input testcases and int n and input array": {
+		"prefix": "mnarr",
+		"body": [
+			"#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n\tint t;cin>>t;\n\tint n;\n\twhile(t--)\n\t{\n\t\tcin>>n;\n\t\tint arr[n];\n\t\tfor(int i=0;i<n;i++)cin>>arr[i]\n\t\t$1\n\t}\n\treturn 0;\n}"
+		],
+		"description": "Main Boilerplate with input testcases and int n  and input array"
+		},
+	"Main with input testcases and int n and input vector": {
+		"prefix": "mnvec",
+		"body": [
+			"#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n\tint t;cin>>t;\n\tint n;\n\twhile(t--)\n\t{\n\t\tcin>>n;\n\t\tvector<int> arr;\n\t\tfor(int i=0;i<n;i++){\n\t\t\tcin>>x;\n\t\t\tarr.push_back(x);\n\t\t}\n\t\t$1\n\t}\n\treturn 0;\n}"
+		],
+		"description": "Main Boilerplate with input testcases and int n  and input vector"
+		},
+	"CP-Template": {
+		"prefix": "maincp",
+		"body": [
+			"#include <bits/stdc++.h>\nusing namespace std;\ntypedef long long int ll;typedef unsigned long long int ull;typedef long double ld;\ntypedef pair<int, int> pii;typedef pair<ll,ll> pll;\ntypedef vector<int> vi;typedef vector<ll> vll;typedef vector<pii> vpii;typedef vector<pll> vpll;typedef vector<vi> vvi;typedef vector<vll> vvll;\n#define test(t)             int t; cin >> t; while(t--)\n#define f(i, a, b)          for(int (i) = (a); (i) < (b); ++(i))\n#define each(it,arr)        for(auto it : arr)\n#define all(x)              x.begin(), x.end()\n#define ff first\n#define ss second\n#define pb push_back\n#define mp make_pair\n#define clr(x) memset(x, 0, sizeof(x))\n#define sortall(x) sort(all(x))\n#define rev(ds) reverse(all(ds))\n#define tsum(ds) (accumulate(all(ds), 0ll))\n#define ctx(ds, x) (count(all(ds), (x)))\n#define sz(ds) ((ll)(ds).size())\n#define mine(ds) (*min_element(all(ds)))\n#define maxe(ds) (*max_element(all(ds)))\n#define minei(ds) (min_element(all(ds)) - (ds).begin())\n#define maxei(ds) (max_element(all(ds)) - (ds).begin())\n#define bs(ds, x) (binary_search(all(ds), x))\n#define lb(ds, x) (lower_bound(all(ds), (x)) - (ds).begin())\n#define ub(ds, x) (upper_bound(all(ds), (x)) - (ds).begin())\n#define ceil(num, div) ((num % div != 0) ? ((num / div) + 1) : (num / div))// normal ceil(n,1)\n#define fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);                                \n#define eps 1e-9\n#define PI 3.141592653589793238462643383279502884L\n#define py cout << \"YES\" << endl // Print Yes\n#define pn cout << \"NO\" << endl	 // Print No\n#define read(v,n,x) for(int i=0;i<n;i++){ cin>>x; v.pb(x);}\nstring to_string(bool b) { return b ? \"1\" : \"0\"; } string to_string(char c) { return string(1, c); } string to_string(string s) { return s;}\ntemplate <class T> string dbg(T x) { return to_string(x); }\ntemplate <typename T> T exp(T b, T p){T x = 1;while(p){if(p&1)x=(x*b);b=(b*b);p=p>>1;}return x;}\nlong long INFF = 1000000000000000005ll;\nconst int mod=1000000007;\ntemplate <typename T> vector<T> &operator--(vector<T> &v){for (auto &i : v)--i;return v;}template <typename T> vector<T> &operator++(vector<T> &v){for (auto &i : v)++i;return v;}template <typename T> istream &operator>>(istream &is, vector<T> &v){for (auto &i : v)is >> i;return is;}template <typename T> ostream &operator<<(ostream &os, vector<T> v){for (auto &i : v)os << i << ' ';return os;}\ntemplate <typename T, typename U> pair<T, U> &operator--(pair<T, U> &p){--p.first;--p.second;return p;}template <typename T, typename U> pair<T, U> &operator++(pair<T, U> &p){++p.first;++p.second;return p;}template <typename T, typename U> istream &operator>>(istream &is, pair<T, U> &p){is >> p.first >> p.second;return is;}template <typename T, typename U> ostream &operator<<(ostream &os, pair<T, U> p){os << p.first << ' ' << p.second;return os;} template <typename T, typename U> pair<T, U> operator-(pair<T, U> &a, pair<T, U> &b) { return mp(a.first - b.first, a.second - b.second); }template <typename T, typename U> pair<T, U> operator+(pair<T, U> &a, pair<T, U> &b) { return mp(a.first + b.first, a.second + b.second);}\nvi prefixSum(vector<int> arr){int n = arr.size();vector<int> preArr(n);preArr[0] = arr[0]; for (int i = 1; i < n; i++)preArr[i] = preArr[i - 1] + arr[i];return preArr;}\n\nvoid solve()\n{\n\t$1\n}\n\nint main()\n{\n\tfast;\n\ttest(t)\n\t\tsolve();\n\treturn 0;\n}"
+		],
+		"description": "Main Boilerplate with input testcases and int n  and input string"
+		},
+	"forloop": {
+		"prefix": "fors",
+		"body": [
+			"for(int i=0;i<$1;i++)\n{\n\t$2\n}\n"
+		],
+		"description": "for loop for i till n"
+	},
+	"forloopi": {
+		"prefix": "fori",
+		"body": [
+			"for(int i=0;i<n;i++)\n{\n\t$1\n}\n"
+		],
+		"description": "for loop for i till n"
+	},
+	"forloopj": {
+		"prefix": "forj",
+		"body": [
+			"for(int j=0;j<n;j++)\n{\n\t$1\n}\n"
+		],
+		"description": "for loop for j till n"
+	},
+	"while loop": {
+		"prefix": "while",
+		"body": [
+			"while( $1 )\n{\n\t\n}\n"
+		],
+		"description": "simple while loop"
+	},
+	"whileloop": {
+		"prefix": "whilei",
+		"body": [
+			"int i=0;\nwhile(i<$1)\n{\n\t\n\ti++;\n}\n"
+		],
+		"description": "while i loop"
+	},
+	"print Array": {
+		"prefix": "printvec",
+		"body": [
+			"void printVector(vector<int> &v)\n{\n\tint n=v.size();\n\tfor(int i=0;i<n;i++)\n\t{\n\t\tcout<<v[i]<<\" \";\n\t}cout<<endl;\n}"
+		],
+		"description": "print array function"
+	}
+}
