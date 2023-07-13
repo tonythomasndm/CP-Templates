@@ -1,0 +1,107 @@
+{
+	// Place your snippets for c here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"main boilerplate": {
+		"prefix": "mainc",
+		"body": [
+			"#include <stdio.h>\n\nint main()\n{\n\t$1\n\treturn 0;\n}"
+		],
+		"description": "Main User snippets"
+	},
+	"scanfint": {
+		"prefix": "si",
+		"body": [
+			"scanf(\"%d\",&$1);"
+		],
+		"description": "scanf integers input"
+	},
+	"scanfchar": {
+		"prefix": "sc",
+		"body": [
+			"scanf(\"%c\",&$1);"
+		],
+		"description": "scanf characters input"
+	},
+	"scanffloat": {
+		"prefix": "sf",
+		"body": [
+			"scanf(\"%f\",&$1);"
+		],
+		"description": "scanf float input"
+	},
+	"printfint": {
+		"prefix": "pi",
+		"body": [
+			"printf(\"%d\",&$1);"
+		],
+		"description": "printf integers input"
+	},
+	"printfchar": {
+		"prefix": "ps",
+		"body": [
+			"printf(\"%s\",&$1);"
+		],
+		"description": "printf characters input"
+	},
+	"printffloat": {
+		"prefix": "pf",
+		"body": [
+			"printf(\"%f\",&$1);"
+		],
+		"description": "printf float input"
+	},
+	"forloopi": {
+		"prefix": "fori",
+		"body": [
+			"for(int i=0;i<n;i++)\n{\n\t$1\n}\n"
+		],
+		"description": "for loop for i till n"
+	},
+	"forloopj": {
+		"prefix": "forj",
+		"body": [
+			"for(int j=0;j<n;j++)\n{\n\t$1\n}\n"
+		],
+		"description": "for loop for j till n"
+	},
+	"while loop": {
+		"prefix": "while",
+		"body": [
+			"while( $1 )\n{\n\t\n}\n"
+		],
+		"description": "simple while loop"
+	},
+	"whileloop": {
+		"prefix": "whilei",
+		"body": [
+			"int i=0;\nwhile(i<$1)\n{\n\t\n\ti++;\n}\n"
+		],
+		"description": "while i loop"
+	},
+	"swapf": {
+		"prefix": "swap",
+		"body": [
+			"void swap(int *a,int *b)\n{\n\tint temp=*a;\n\t*a=*b;\n\t*b=temp;\n}"
+		],
+		"description": "swap function"
+	},
+	"print Array": {
+		"prefix": "printarray",
+		"body": [
+			"void printArray(int arr[])\n{\n\tint n=sizeof(arr)/sizeof(arr[0]);\n\tfor(int i=0;i<n;i++)\n\t{\n\t\tprintf(\"%d\",arr[i]);\n\t}\n}"
+		],
+		"description": "print array function"
+	}
+	
+}
